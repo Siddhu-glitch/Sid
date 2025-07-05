@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy — moments that made me smile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-pink-200 text-gray-800">
+
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold mb-4 fade-in">Joy — moments that made me smile</h1>
+    <p class="italic text-gray-600 mb-8 fade-in">little fragments of happiness that stayed 🌼</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto fade-in">
+      <a href="travel-diaries.html" class="floating transform hover:scale-105 transition duration-300 bg-white/60 p-6 rounded-xl shadow hover:shadow-yellow-200">
+        <h2 class="font-semibold text-lg">Travel Diaries</h2>
+      </a>
+      <a href="people.html" class="floating transform hover:scale-105 transition duration-300 bg-white/60 p-6 rounded-xl shadow hover:shadow-yellow-200">
+        <h2 class="font-semibold text-lg">People</h2>
+      </a>
+      <a href="notes.html" class="floating transform hover:scale-105 transition duration-300 bg-white/60 p-6 rounded-xl shadow hover:shadow-yellow-200">
+        <h2 class="font-semibold text-lg">Notes</h2>
+      </a>
+    </div>
+
+    <a href="index.html" class="mt-8 inline-block bg-yellow-200 hover:bg-yellow-300 text-yellow-900 font-semibold py-2 px-6 rounded-2xl shadow-md transition">
+      back to emotions
+    </a>
+  </section>
+
+</body>
+</html>
