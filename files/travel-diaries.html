@@ -25,7 +25,6 @@
     .aspect-4-3 {
       aspect-ratio: 4 / 3;
     }
-    /* Hover zoom effect */
     .hover-zoom {
       transition: transform 0.3s ease;
     }
@@ -36,49 +35,59 @@
 </head>
 <body class="bg-gradient-to-br from-yellow-100 via-pink-50 to-pink-200 text-gray-800">
 
-  <section class="min-h-screen flex flex-col items-center justify-start px-4 py-10 text-center fade-in">
-    <h1 class="text-3xl md:text-4xl font-semibold mb-2">Travel Diaries 🌍✨</h1>
-    <p class="italic text-gray-600 mb-6">places i've been, feelings i brought back</p>
-    <h2 class="text-lg mb-6">"sometimes, a road trip heals more than a thousand words."</h2>
+<section class="min-h-screen flex flex-col items-center justify-start px-4 py-10 text-center fade-in">
+  <h1 class="text-3xl md:text-4xl font-semibold mb-2">Travel Diaries 🌍✨</h1>
+  <p class="italic text-gray-600 mb-6">places i've been, feelings i brought back</p>
 
-    <div class="bg-white/60 backdrop-blur p-6 rounded-xl shadow max-w-3xl text-left mb-8">
-      <div class="diary-text space-y-2">
-        <p>add your story here… 🌿✨</p>
-      </div>
+  <!-- Filter buttons -->
+  <div class="flex flex-wrap justify-center gap-3 mb-8">
+    <button onclick="filterSelection('all')" class="bg-yellow-200 hover:bg-yellow-300 text-yellow-900 font-semibold py-1 px-4 rounded-full shadow transition">all</button>
+    <button onclick="filterSelection('araku')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">araku</button>
+    <button onclick="filterSelection('vizag')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">vizag</button>
+    <button onclick="filterSelection('chennai')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">chennai</button>
+    <button onclick="filterSelection('pondi')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">pondi</button>
+    <button onclick="filterSelection('hyderabad')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">hyderabad</button>
+    <button onclick="filterSelection('sunsets')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">sunsets</button>
+    <button onclick="filterSelection('guntur')" class="bg-white/60 hover:bg-pink-200 text-gray-800 font-semibold py-1 px-4 rounded-full shadow transition">guntur</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mb-8">
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item araku">
+      <img src="./images/20230113_131130.jpg" alt="Araku pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
     </div>
-
-    <h2 class="text-2xl font-semibold mb-4">Gallery 📸</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mb-8">
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/20230113_131130.jpg" alt="Sunset drive" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Sunset drive 🌅</p> -->
-      </div>
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/20230113_131137.jpg" alt="Quiet chai stop" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Quiet chai stop ☕</p> -->
-      </div>
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/20230114_103531.jpg" alt="Empty road at night" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Empty road at night 🌙</p> -->
-      </div>
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/20230114_110555.jpg" alt="Morning skies" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Morning skies 🌤️</p> -->
-      </div>
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/20230113_152443.jpg" alt="Morning skies" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Morning skies 🌤️</p> -->
-      </div>
-      <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2">
-        <img src="./images/vaishnavi_yalavarthi-20230115-0001.jpg" alt="Morning skies" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
-        <!-- <p class="mt-2 text-sm italic text-gray-700">Morning skies 🌤️</p> -->
-      </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item vizag">
+      <img src="./images/20230113_131137.jpg" alt="Vizag pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
     </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item chennai">
+      <img src="./images/20230114_103531.jpg" alt="Chennai pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
+    </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item pondi">
+      <img src="./images/20230114_110555.jpg" alt="Pondi pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
+    </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item hyderabad">
+      <img src="./images/20230113_152443.jpg" alt="Hyderabad pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
+    </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item sunsets">
+      <img src="./images/vaishnavi_yalavarthi-20230115-0001.jpg" alt="Sunset pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
+    </div>
+    <div class="bg-white/70 border border-pink-200 rounded-xl shadow-md p-2 filter-item guntur">
+      <img src="./images/20230113_131130.jpg" alt="Guntur pic" class="rounded-lg object-cover w-full aspect-4-3 hover-zoom">
+    </div>
+  </div>
 
-    <a href="joy.html" class="mt-4 inline-block bg-yellow-200 hover:bg-yellow-300 text-yellow-900 font-semibold py-2 px-6 rounded-2xl shadow-md transition">
-      back to joy
-    </a>
-  </section>
+  <a href="joy.html" class="mt-4 inline-block bg-yellow-200 hover:bg-yellow-300 text-yellow-900 font-semibold py-2 px-6 rounded-2xl shadow-md transition">back to joy</a>
+</section>
+
+<script>
+  function filterSelection(category) {
+    var items = document.getElementsByClassName('filter-item');
+    if (category == 'all') category = '';
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = items[i].classList.contains(category) || category == '' ? "block" : "none";
+    }
+  }
+</script>
 
 </body>
 </html>
